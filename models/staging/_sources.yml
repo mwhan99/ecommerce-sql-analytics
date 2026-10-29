@@ -17,3 +17,6 @@ sources:
       - name: category_translation
         meta:
           external_location: "read_csv('data/raw/product_category_name_translation.csv', header = true)"
+      # Marketing Funnel by Olist (a second Kaggle dataset)
+      - name: marketing_qualified_leads
+      - name: closed_deals

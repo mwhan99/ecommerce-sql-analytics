@@ -32,3 +32,16 @@ models:
     columns:
       - name: seller_id
         data_tests: [unique, not_null]
+  - name: stg_marketing_leads
+    columns:
+      - name: mql_id
+        data_tests: [unique, not_null]
+  - name: stg_closed_deals
+    columns:
+      - name: mql_id
+        data_tests:
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_marketing_leads')
+                field: mql_id

@@ -31,8 +31,9 @@ are valid, and payments roughly match item totals.
 
 ## Run it yourself
 
-1. Download the dataset from Kaggle:
-   https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+1. Download both datasets from Kaggle,
+   https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce and
+   https://www.kaggle.com/datasets/olistbr/marketing-funnel-olist,
    and unzip the CSVs into `data/raw/`.
 2. Set up and build:
 
@@ -47,3 +48,12 @@ are valid, and payments roughly match item totals.
 ## Data source
 
 Olist, *Brazilian E-Commerce Public Dataset*, Kaggle (CC BY-NC-SA 4.0).
+
+## Explore with SQL
+
+```bash
+.venv/bin/python scripts/sql_notebook.py
+```
+
+opens the DuckDB notebook at http://localhost:4213, connected to
+`warehouse.duckdb`. Stop it (Ctrl+C) before running `dbt build`.
