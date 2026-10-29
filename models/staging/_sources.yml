@@ -1,0 +1,19 @@
+version: 2
+
+# The raw Kaggle CSVs. dbt-duckdb reads them straight from data/raw/,
+# so there is no separate loading step.
+sources:
+  - name: olist
+    meta:
+      external_location: "read_csv('data/raw/olist_{name}_dataset.csv', header = true)"
+    tables:
+      - name: customers
+      - name: orders
+      - name: order_items
+      - name: order_payments
+      - name: order_reviews
+      - name: products
+      - name: sellers
+      - name: category_translation
+        meta:
+          external_location: "read_csv('data/raw/product_category_name_translation.csv', header = true)"

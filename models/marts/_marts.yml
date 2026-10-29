@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: One row per order, with totals, delivery timing and review score.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: customer_unique_id
+        data_tests: [not_null]
+      - name: customer_order_number
+        data_tests: [not_null]
+  - name: fct_order_items
+    description: One row per item sold, with product category and seller state.
+    columns:
+      - name: order_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fct_orders')
+                field: order_id
+  - name: dim_customers
+    description: One row per person, with their cohort month and lifetime spend.
+    columns:
+      - name: customer_unique_id
+        data_tests: [unique, not_null]

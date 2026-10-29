@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+
+# dbt build output
+target/
+dbt_packages/
+logs/
+
+# Data (download from Kaggle, see README)
+data/raw/*.csv
+data/raw/*.zip
+*.duckdb
+*.duckdb.wal
+
+.DS_Store

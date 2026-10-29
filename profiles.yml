@@ -1,0 +1,8 @@
+# Connection settings. DuckDB is a single file, so there is no password.
+ecommerce_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: warehouse.duckdb
+      threads: 4
