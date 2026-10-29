@@ -4,13 +4,16 @@ Run from the project folder:  .venv/bin/python scripts/sql_notebook.py
 Stop it with Ctrl+C. (Stop it before running `dbt build`: only one program
 can have the database file open for writing at a time.)
 """
+import os
 import time
 from pathlib import Path
 
 import duckdb
 
-DB = Path(__file__).resolve().parent.parent / "warehouse.duckdb"
-con = duckdb.connect(str(DB))
+# Start from the project folder: the staging views read data/raw/*.csv
+# by a relative path, which only works from here.
+os.chdir(Path(__file__).resolve().parent.parent)
+con = duckdb.connect("warehouse.duckdb")
 con.execute("install ui; load ui; call start_ui_server();")
 print("SQL notebook running at http://localhost:4213  (Ctrl+C to stop)")
 try:
