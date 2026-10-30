@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: rpt_monthly_kpis
+    description: Q1. Monthly orders, customers, revenue and month-over-month growth.
+    columns:
+      - name: order_month
+        data_tests: [unique, not_null]
+  - name: rpt_cohort_retention
+    description: Q2. Share of each monthly customer cohort still buying N months later.
+  - name: rpt_customer_segments
+    description: Q3. Spend segments (VIP = top 1%) and their share of revenue.
+  - name: rpt_promo_vouchers
+    description: Q4. Customers with vs without a voucher on their first order.
+  - name: rpt_delivery_reviews
+    description: Q5. Review scores by how late the delivery was.
+  - name: rpt_state_performance
+    description: Q6. Revenue, delivery speed and reviews by customer state.
+  - name: rpt_category_performance
+    description: Q7. Revenue by product category, with running share.
+    columns:
+      - name: category
+        data_tests: [unique]
+  - name: rpt_top_sellers_by_state
+    description: Q8. Top 3 sellers by revenue in each state.
+  - name: rpt_repeat_purchase_timing
+    description: Q9. Days between a customer's consecutive orders.
+  - name: rpt_marketing_funnel
+    description: Q10. Leads, sign-ups and seller revenue by marketing channel.
+    columns:
+      - name: channel
+        data_tests: [unique, not_null]

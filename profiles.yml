@@ -4,5 +4,6 @@ ecommerce_analytics:
   outputs:
     dev:
       type: duckdb
-      path: warehouse.duckdb
+      # DBT_DUCKDB_PATH lets you build into a different file (e.g. a test copy).
+      path: "{{ env_var('DBT_DUCKDB_PATH', 'warehouse.duckdb') }}"
       threads: 4

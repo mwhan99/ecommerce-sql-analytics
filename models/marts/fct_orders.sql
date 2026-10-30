@@ -30,9 +30,11 @@ select
     o.delivered_at,
     o.estimated_delivery_at,
     date_diff('day', o.purchased_at, o.delivered_at) as days_to_deliver,
+    -- late = arrived after the promised DATE (arriving on the promised
+    -- day, at any time, counts as on time)
     case
         when o.delivered_at is null then null
-        else o.delivered_at > o.estimated_delivery_at
+        else cast(o.delivered_at as date) > cast(o.estimated_delivery_at as date)
     end                                       as is_late,
     -- 1 = this person's first order, 2 = their second, ...
     row_number() over (
