@@ -103,7 +103,7 @@ raw CSVs (data/raw/)
 .venv/bin/python scripts/sql_notebook.py
 ```
 
-opens the DuckDB notebook at http://localhost:4213, connected to
+opens the DuckDB notebook at `localhost:4213`, connected to
 `warehouse.duckdb`. Stop it (Ctrl+C) before running `dbt build`.
 
 ## Data source
