@@ -1,0 +1,5 @@
+segment,customers,revenue,revenue_share_pct,avg_spend,min_spend,avg_orders,repeat_rate_pct
+1. VIP (top 1%),950,1544866.35,11.4,1626.18,1004.99,1.09,6.7
+2. High value (top 2-10%),8550,4006441.03,29.7,468.59,281.20,1.11,8.9
+3. Mid value (top 11-50%),38000,5695753.59,42.2,149.89,89.80,1.04,4.2
+4. Low value (bottom 50%),47490,2247339.77,16.7,47.32,0.00,1.01,1.0

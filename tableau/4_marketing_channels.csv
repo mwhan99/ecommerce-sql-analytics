@@ -1,0 +1,11 @@
+channel,leads,sellers_signed,lead_to_seller_pct,median_days_to_close,sellers_with_sales,revenue_from_sellers,revenue_per_lead
+organic_search,2296,271,11.8,14.0,112,206995.55,90.15
+paid_search,1586,195,12.3,15.0,101,152797.05,96.34
+social,1350,75,5.6,30.0,31,43418.00,32.16
+unknown,1159,193,16.7,11.0,85,214726.30,185.27
+direct_traffic,499,56,11.2,10.0,31,21884.70,43.86
+email,493,15,3.0,21.0,6,8484.99,17.21
+referral,284,24,8.5,18.5,9,17887.15,62.98
+other,150,4,2.7,9.0,2,6888.65,45.92
+display,118,6,5.1,8.5,2,923.00,7.82
+other_publicities,65,3,4.6,35.0,0,0.00,0.0

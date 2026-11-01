@@ -6,6 +6,9 @@ leads). Raw CSVs are modelled into tested tables with **dbt** on **DuckDB**,
 then used to answer 10 business questions about growth, retention, customer
 value, promotions, delivery and acquisition.
 
+**📊 Interactive dashboard:** [Olist E-commerce Analytics on Tableau Public](https://public.tableau.com/app/profile/meng.wen.han/viz/OlistE-commerceAnalytics_17934985929420/Dashboard)
+
+
 ## Key findings
 
 | # | Question | Finding |
